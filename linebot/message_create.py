@@ -1,6 +1,6 @@
 from datetime import datetime
 from math import ceil
-import requests
+import requests, bs4
 import json
 import pprint
 
@@ -56,7 +56,7 @@ def create_single_text_message(message):
                 {
                     'type': 'text',
                     'text': message
-                }
+                },
             ]
     return test_message
 
@@ -65,7 +65,7 @@ def callapi(year, course):
     API_URL = f'https://api.moemoe.tokyo/anime/v1/master/{year}/{course}'
     res = requests.get(API_URL)
     data = json.loads(res.text)
-    # pprint.pprint(data) # デバッグ用
+    #pprint.pprint(data[0:2]) # デバッグ用
     return data
 
 def checkcourse(year, course):
@@ -77,3 +77,16 @@ def checkcourse(year, course):
         year -= 1
         course = 4
     return year, course
+
+def create_img(url):
+    # og:imageのURLを取得する
+    result = requests.get(url)
+    soup = bs4.BeautifulSoup(result.content, 'html.parser')
+    og_image_elems  = soup.select('[property="og:image"]')
+    img_url = og_image_elems[0].get("content")
+    img_dict = {
+        'type': 'image',
+        'originalContentUrl': img_url,
+        'previewImageUrl': img_url
+    }
+    return img_dict
