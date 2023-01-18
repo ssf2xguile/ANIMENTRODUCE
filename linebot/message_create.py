@@ -28,17 +28,7 @@ def create_single_text_message(message):
             flex_message_json = create_anime_list_json(first_argument, data)
             flex_message = json.loads(flex_message_json)
     elif (first_argument == '来期アニメ'):
-        year, course = checkcourse(datetime.now().year, ceil(datetime.now().month / 3)+1)
-        data = callapi(year, course)
-        if (second_argument != None):
-            for i in range(len(data)):
-                if(data[i]['title'] == second_argument):
-                    img_url = create_img(data[i]['public_url'])
-                    flex_message_json = create_anime_info_json(year, course, data[i], img_url)
-                    flex_message = json.loads(flex_message_json)
-        else:
-            flex_message_json = create_anime_list_json(first_argument, data)
-            flex_message = json.loads(flex_message_json)
+        message = 'すまん、来期アニメのデータ取れないんだわ'
     elif (first_argument == '前期アニメ'):
         year, course = checkcourse(datetime.now().year, ceil(datetime.now().month / 3)-1)
         data = callapi(year, course)
