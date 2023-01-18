@@ -1,0 +1,172 @@
+{
+  "type": "flex",
+  "altText": "アニメ詳細情報",
+  "contents": {
+    "type": "bubble",
+    "hero": {
+      "type": "image",
+      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+      "size": "full",
+      "aspectRatio": "2:1",
+      "action": {
+        "type": "uri",
+        "uri": "http://lineco111111111111"
+      },
+      "aspectMode": "cover"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "東京リベンジャーズ",
+          "weight": "bold",
+          "size": "xl"
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "margin": "lg",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "baseline",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "タイトル",
+                  "color": "#aaaaaa",
+                  "size": "sm",
+                  "flex": 2,
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "東京リベンジャーズ 聖夜決戦編",
+                  "wrap": true,
+                  "color": "#666666",
+                  "size": "sm",
+                  "flex": 5
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "URL",
+                  "color": "#aaaaaa",
+                  "size": "sm",
+                  "flex": 2,
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "https://tokyo-revengers-anime.com/",
+                  "wrap": true,
+                  "color": "#666666",
+                  "size": "sm",
+                  "flex": 5
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "クール",
+                  "color": "#aaaaaa",
+                  "size": "sm",
+                  "flex": 2,
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "2023年冬アニメ",
+                  "wrap": true,
+                  "color": "#666666",
+                  "size": "sm",
+                  "flex": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "contents": [
+        {
+          "type": "button",
+          "style": "link",
+          "height": "sm",
+          "action": {
+            "type": "uri",
+            "label": "公式サイト",
+            "uri": "http://linecorp.com/"
+          }
+        }
+      ],
+      "flex": 0
+    }
+  }
+},
+
+{
+  "type": "flex",
+  "altText": "アニメ詳細情報",
+  "contents": {
+    "type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "今期アニメリスト",
+          "weight": "bold",
+          "size": "md",
+          "align": "center"
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "margin": "lg",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "東京リベンジャーズ",
+                "text": "今期アニメ-東京リベンジャーズ 聖夜決戦編"
+              },
+              "height": "sm"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "異世界おじさん",
+                "text": "前期アニメ-異世界おじさん"
+              },
+              "height": "sm"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

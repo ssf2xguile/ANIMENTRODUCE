@@ -10,6 +10,8 @@ HEADER = {
     'Authorization': 'Bearer ' + settings.ACCESSTOKEN
 }
 
+RICHMENU_ENDPOINT_URL = "https://api.line.me/v2/bot/user/all/richmenu/{richMenuId}"
+
 class LineMessage():
     def __init__(self, messages):
         self.messages = messages
@@ -19,7 +21,7 @@ class LineMessage():
             'replyToken': reply_token,
             'messages': self.messages
         }
-        print(body)
+        #print(body)
         req = urllib.request.Request(REPLY_ENDPOINT_URL, json.dumps(body).encode(), HEADER)
         try:
             with urllib.request.urlopen(req) as res:
